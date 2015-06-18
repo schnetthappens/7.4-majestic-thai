@@ -17,7 +17,7 @@ import FoodListView from '/views/foodListView';
 
 
 
-    // $('.content').append(JST.order());
+    $('.content').append(JST.order());
 
 
   });
