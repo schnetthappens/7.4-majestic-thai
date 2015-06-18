@@ -1,6 +1,6 @@
 
 export default Backbone.View.extend({
-  template: JST['menu-items'],
+  template: JST['menu-item'],
 
   tagName: 'ul',
   className: 'menu-list',
@@ -12,7 +12,7 @@ export default Backbone.View.extend({
 
 
   render: function(){
-    this.$el.html(this.template());
+    this.$el.html(this.template(this.collection.toJSON()));
     return this;
   }
 

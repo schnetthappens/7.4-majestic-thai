@@ -9,12 +9,13 @@ import FoodListView from '/views/foodListView';
 
     var foods = new FoodListCollection();
       foods.fetch().then(function(){
-        console.log(foods);
+
+        var foodListView = new FoodListView({collection: foods});
+          $('.menu-container').append(foodListView.el);
 
       });
 
-    // var foodListView = new FoodListView();
-    //   $('.menu-container').append(foodListView.el);
+
 
     // $('.content').append(JST.order());
 

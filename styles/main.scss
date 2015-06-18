@@ -41,7 +41,7 @@ body {
 
 .menu-container {
   @include span-columns(8);
-  height: 400px;
+  height: auto;
   background-color: #fff;
   margin-top: 50px;
   border: 1px solid grey;
