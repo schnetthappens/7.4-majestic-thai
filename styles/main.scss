@@ -26,8 +26,17 @@ body {
   opacity: 0.9;
 }
 
+
 .content {
   @include outer-container(1040px);
+}
+
+.about {
+  @include span-columns(8);
+  height: 70px;
+  background-color: #fff;
+  margin-top: 50px;
+  border: 1px solid grey;
 }
 
 .menu-container {
