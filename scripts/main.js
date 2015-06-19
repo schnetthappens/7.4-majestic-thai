@@ -1,6 +1,7 @@
 import ajaxConfig from './ajax-config';
 import {FoodListCollection} from '/models/foodListCollection';
 import FoodListView from '/views/foodListView';
+import Order from './models/order';
 
 (function(){
   'use strict';
@@ -9,6 +10,7 @@ import FoodListView from '/views/foodListView';
     Backbone.history.start();
 
     var foods = new FoodListCollection();
+    var order = new Order();
       foods.fetch().then(function(){
 
         var foodListView = new FoodListView({collection: foods});
