@@ -147,31 +147,37 @@
   {
     "item": "White Rice (cup)",
     "price": 100,
+    "description": "Choice of chicken, beef or pork sauteed in coconut milk with potatoes, cashew nuts, onions and pineapple.",
     "category": "Sides"
   },
   {
     "item": "White Rice (bowl)",
     "price": 300,
+    "description": "Choice of chicken, beef or pork sauteed in coconut milk with potatoes, cashew nuts, onions and pineapple.",
     "category": "Sides"
   },
   {
     "item": "Brown Rice (cup)",
     "price": 100,
+    "description": "Choice of chicken, beef or pork sauteed in coconut milk with potatoes, cashew nuts, onions and pineapple.",
     "category": "Sides"
   },
   {
     "item": "Brown Rice (bowl)",
     "price": 300,
+    "description": "Choice of chicken, beef or pork sauteed in coconut milk with potatoes, cashew nuts, onions and pineapple.",
     "category": "Sides"
   },
   {
     "item": "Extra Tofu",
     "price": 200,
+    "description": "Choice of chicken, beef or pork sauteed in coconut milk with potatoes, cashew nuts, onions and pineapple.",
     "category": "Sides"
   },
   {
     "item": "Extra Peanut Sauce",
     "price": 100,
+    "description": "Choice of chicken, beef or pork sauteed in coconut milk with potatoes, cashew nuts, onions and pineapple.",
     "category": "Sides"
   }
 ]

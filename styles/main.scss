@@ -2,7 +2,7 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: 'Roboto', sans-serif;
 
 // Colors
 $blue: #477dca;
@@ -166,6 +166,41 @@ body {
   border: 1px solid grey;
 }
 
+
+.menu-list {
+  padding-left: 0;
+
+}
+
+  .menu-item {
+    list-style: none;
+    margin: 2em 2em;
+  }
+
+    .menu-item p {
+      display: inline-block;
+      max-width: 70%;
+      font-weight: 300;
+    }
+
+    .price {
+      width: 15%;
+      color: #fff;
+      background-color: #7CBB55;
+      margin-left: 5em;
+      margin-bottom: 3em;
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border: 1px solid #7CBB55;
+    }
+
+      .price:hover {
+        color: #7CBB55;
+        background-color: #fff;
+        border: 1px solid #7CBB55;
+      }
+
+
 .order-container {
   @include span-columns(4);
   @include omega;
@@ -174,3 +209,15 @@ body {
   margin-top: 50px;
   border: 1px solid grey;
 }
+
+
+  .your-order {
+    margin: 1em 5em;
+  }
+
+    .your-order h3,
+    .your-order a {
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+    }
