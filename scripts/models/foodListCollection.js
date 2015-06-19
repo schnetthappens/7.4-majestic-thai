@@ -1,6 +1,11 @@
 
 var FoodListCollection = Backbone.Collection.extend({
-  url: 'menu.json'
+  url: "https://api.parse.com/1/classes/Food",
+  idAttribute: 'objectID',
+
+  parse: function(response){
+    return response.results;
+  }
 
 });
 

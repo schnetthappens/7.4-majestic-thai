@@ -1,3 +1,4 @@
+import ajaxConfig from './ajax-config';
 import {FoodListCollection} from '/models/foodListCollection';
 import FoodListView from '/views/foodListView';
 
