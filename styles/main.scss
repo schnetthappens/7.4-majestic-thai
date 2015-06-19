@@ -20,50 +20,143 @@ body {
   color: $base-font-color;
 }
 
+/*MAIN HEADER image, NAVBAR and TITLE*/
+
+
 .header {
   height: 450px;
   max-width: 100%;
   background-image: url("/images/thai.jpg");
-  background-position: 0 0px;
-  opacity: 0.9;
+  background-position: -200px -200px;
+  opacity: 1;
 }
 
   .nav-bar {
     @include outer-container(1040px);
     height: 70px;
     background-color: #fff;
+    border: 1px solid $light-gray;
   }
 
     .logo {
       height: 30px;
       display: inline-block;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
+      margin: 1.2em 0 1em 2em;
     }
 
     .primary-nav {
-      width: 400px;
+      width: 450px;
       line-height: 70px;
       display: inline-block;
+      margin: 0;
+      float: right;
     }
 
       .primary-nav a {
         text-decoration: none;
-        padding-left: 3em;
+        color: #7CBB55;
+        margin-left: 3em;
+        text-transform: uppercase;
       }
+
+
+      /*BUTTONS*/
+
+        .sign-in,
+        .order-ahead {
+          color: #7CBB55;
+          background-color: #fff;
+          border-radius: 4px;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+          border: 1px solid #7CBB55;
+          text-transform: uppercase;
+        }
+
+        .sign-in:hover, {
+          background-color: #7CBB55;
+          color: #fff;
+        }
+
+        .order-ahead:hover {
+          background-color: #7CBB55;
+          color: #fff;
+        }
+
+
+    /*ORDER AHEAD*/
+
+  .restaurant-info {
+    @include outer-container(1040px);
+    width: 50%;
+    /* background-color: #fff;
+    opacity: 0.7; */
+  }
+
+    .restaurant-info h1 {
+      font-family: 'Kaushan Script', cursive;
+      color: #fff;
+      font-size: 6em;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    .restaurant-details {
+      list-style: none;
+      padding-left: 0;
+    }
+
+      .restaurant-details li {
+        display: inline-block;
+      }
+
+
+  /*MAIN CONTENT, including ORDER AHEAD, MENU & ORDER*/
 
 
 .content {
   @include outer-container(1040px);
 }
 
-.about {
+.about-menu {
   @include span-columns(8);
   height: 70px;
   background-color: #fff;
   margin-top: 50px;
   border: 1px solid grey;
 }
+
+  .about-menu p {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  .search-container {
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid $light-gray;
+  }
+
+    .search-wrapper {
+      @include outer-container(1040px);
+    }
+
+      .search-bar {
+        @include span-columns(6);
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .search-bar input {
+        width: 80%;
+        height: 50px;
+        border: none;
+        margin-top: 0.3em;
+        margin-left: 0.5em;
+        border-bottom: 1px solid #7CBB55;
+      }
+
+      .fa {
+        color: #7CBB55;
+      }
 
 .menu-container {
   @include span-columns(8);
