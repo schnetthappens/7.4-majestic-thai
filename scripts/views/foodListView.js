@@ -13,6 +13,7 @@ export default Backbone.View.extend({
 
   render: function(){
     this.renderChildren();
+    // console.log(this.children);
   },
 
   //creates children views
