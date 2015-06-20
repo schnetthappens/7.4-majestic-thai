@@ -1,5 +1,5 @@
 
-import {FoodListCollection} from './foodListCollection';
+import {MenuListCollection} from './menuListCollection';
 
 var Order = Backbone.Model.extend({
   idAttribute: 'objectId',

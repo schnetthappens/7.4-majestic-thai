@@ -1,5 +1,5 @@
 
-var FoodListCollection = Backbone.Collection.extend({
+var MenuListCollection = Backbone.Collection.extend({
   url: "https://api.parse.com/1/classes/Food",
   idAttribute: 'objectId',
 
@@ -9,4 +9,4 @@ var FoodListCollection = Backbone.Collection.extend({
 
 });
 
-export default {FoodListCollection};
+export default {MenuListCollection};

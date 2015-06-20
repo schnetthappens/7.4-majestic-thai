@@ -1,6 +1,6 @@
 import ajaxConfig from './ajax-config';
-import {FoodListCollection} from '/models/foodListCollection';
-import FoodListView from '/views/foodListView';
+import {MenuListCollection} from '/models/menuListCollection';
+import MenuListView from '/views/menuListView';
 import Order from './models/order';
 
 (function(){
@@ -9,11 +9,11 @@ import Order from './models/order';
   $(document).ready(function(){
     Backbone.history.start();
 
-    var foods = new FoodListCollection();
-      foods.fetch().then(function(){
+    var items = new MenuListCollection();
+      items.fetch().then(function(){
 
-        var foodListView = new FoodListView({collection: foods});
-          $('.menu-container').append(foodListView.el);
+        var menuListView = new MenuListView({collection: items});
+          $('.menu-container').append(menuListView.el);
 
       });
 

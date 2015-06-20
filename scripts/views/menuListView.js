@@ -1,5 +1,5 @@
 
-import FoodCategoryView from './foodCategoryView';
+import MenuCategoryView from './menuCategoryView';
 
 export default Backbone.View.extend({
 
@@ -21,7 +21,7 @@ export default Backbone.View.extend({
     _.invoke(this.children || [], 'remove');
 
         this.children = this.collection.map(function(child) {
-          var view = new FoodCategoryView({
+          var view = new MenuCategoryView({
             model: child,
             collection: this.collection
           });

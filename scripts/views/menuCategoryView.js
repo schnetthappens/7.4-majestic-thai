@@ -1,6 +1,6 @@
 
-import FoodItemView from './foodItemView';
-import FoodListCollection from '../models/foodListCollection';
+import MenuItemView from './menuItemView';
+import MenuListCollection from '../models/menuListCollection';
 
 export default Backbone.View.extend({
   template: JST['menu-category'],
@@ -18,7 +18,7 @@ export default Backbone.View.extend({
   renderChildren: function(){
     _.invoke(this.children || [], 'remove');
     this.children = this.collection.map((child) => {
-      var view = new FoodItemView({
+      var view = new MenuItemView({
         model: child,
         collection: this.collection
       });
