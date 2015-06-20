@@ -1,8 +1,8 @@
-import FoodItemView from './foodItemView';
+
+import FoodCategoryView from './foodCategoryView';
 
 export default Backbone.View.extend({
 
-  tagName: 'ul',
   className: 'menu-list',
 
 
@@ -20,23 +20,25 @@ export default Backbone.View.extend({
   renderChildren: function(){
     _.invoke(this.children || [], 'remove');
 
-    this.children = this.collection.map((child) => {
-      var view = new FoodItemView({
-        model: child
-      });
+        this.children = this.collection.map(function(child) {
+          var view = new FoodCategoryView({
+            model: child,
+            collection: this.collection
+          });
+          this.$el.append(view.el);
+          return view;
+        }.bind(this));
 
-      this.$el.append(view.el);
-      return view;
-    }.bind(this));
+        //each over the collection and give me all food items sorted by category
+        _.each(this.collection.groupBy('category'), function(item, category) {
+            console.log(item,category);
+          })
 
-    return this;
+        return this;
+      },
 
-  },
-
-    remove: function(){
+      remove: function(){
       _.invoke(this.children || [], 'remove');
-      Backbone.View.prototype.remove.apply(this.arguments);
-
+      Backbone.View.prototype.remove.apply(this, arguments);
     }
-
 });

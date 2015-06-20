@@ -1,13 +1,13 @@
+import Order from '/models/order';
+
 
 export default Backbone.View.extend({
   template: JST['menu-item'],
   tagName: 'li',
   className: 'menu-item',
 
-
   events: {
-    'click .price': 'addItem'
-
+    'click .price': 'addFoodToOrder'
   },
 
   initialize: function(){
@@ -16,11 +16,11 @@ export default Backbone.View.extend({
 
   render:function(){
     this.$el.html(this.template(this.model.toJSON()));
-
   },
 
-  addItem: function(){
-    console.log(this.model);
+  addFoodToOrder: function(e){
+    e.preventDefault();
+    console.log('test');
   }
 
 });

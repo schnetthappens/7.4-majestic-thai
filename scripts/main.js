@@ -10,17 +10,12 @@ import Order from './models/order';
     Backbone.history.start();
 
     var foods = new FoodListCollection();
-    var order = new Order();
       foods.fetch().then(function(){
 
         var foodListView = new FoodListView({collection: foods});
           $('.menu-container').append(foodListView.el);
 
       });
-
-
-
-    // $('.content').append(JST.order());
 
 
   });
