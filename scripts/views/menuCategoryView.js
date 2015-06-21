@@ -24,9 +24,10 @@ export default Backbone.View.extend({
 
 
   toggleCategory: function(e){
-    // e.preventDefault();
     console.log(e.target);
     $('.category-list').slideToggle('slow', function(){});
+    //$(this).siblings().next('.category-list').slideUp();
+
   },
 
   renderChildren: function(){

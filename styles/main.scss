@@ -120,14 +120,22 @@ body {
   @include span-columns(8);
   height: 70px;
   background-color: #fff;
-  margin-top: 50px;
-  border: 1px solid grey;
+  margin-top: 2em;
+  border: 1px solid #7CBB55;
+  border-radius: 8px;
 }
 
   .about-menu p {
     display: inline-block;
+    font-size: 1.1em;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
     text-transform: uppercase;
   }
+
+    .order-ahead {
+      margin-left: 6em;
+    }
 
   .search-container {
     height: 70px;
@@ -161,39 +169,47 @@ body {
 .menu-container {
   @include span-columns(8);
   height: auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   margin-top: 50px;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 
 .menu-list {
   padding-left: 0;
+  /* background-color: $light-gray; */
 
 }
 
   .menu-category {
-    background-color: $light-gray;
+    background-color: #fff;
+    margin-bottom: 2em;
+    border: 1px solid #7CBB55;
+    border-radius: 8px;
   }
 
     .category-list {
       display: none;
+      padding-left: 1.5em;
     }
 
   .category-name {
     display: inline-block;
-    margin-left: 2em;
-  /*   position: relative; */
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-left: 1.5em;
+    position: relative;
   }
 
-  /* .show-category {
+  .show-category {
     position: relative;
-    top: 1em;
-    right: 5em;
-  } */
+    top: 0;
+    left: 9em;
+  }
 
   .menu-item {
     list-style: none;
     margin: 2em 2em;
+    border-bottom: 1px solid $light-gray;
   }
 
     .menu-item p {
@@ -226,17 +242,41 @@ body {
   height: 300px;
   background-color: #fff;
   margin-top: 50px;
-  border: 1px solid grey;
+  border: 1px solid #7CBB55;
+  border-radius: 8px;
 }
 
 
   .your-order {
     margin: 1em 5em;
+    /* border-bottom: 1px solid $light-gray; */
   }
+
+    .your-order i {
+      margin-left: 0.7em;
+      margin-bottom: 0.3em;
+    }
 
     .your-order h3,
     .your-order a {
       margin: 0;
       text-transform: uppercase;
       text-align: center;
+    }
+
+    .your-order a {
+      text-decoration: none;
+      font-size: 0.9em;
+      color: #7CBB55;
+      margin-left: 0.7em;
+    }
+
+    .place-order {
+      width: 100%;
+      color: #fff;
+      background-color: #7CBB55;
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border: 1px solid #7CBB55;
+      text-transform: uppercase;
     }
