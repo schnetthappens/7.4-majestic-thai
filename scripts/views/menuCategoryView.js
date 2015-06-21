@@ -23,11 +23,8 @@ export default Backbone.View.extend({
 
 
   toggleCategory: function(e){
-    console.log(e);
+    // console.log(e);
     $(this.el).closest('.menu-category').find('.category-list').slideToggle('slow', function(){});
-    // $(this).siblings().slideDown();
-    //$(this).siblings().next('.category-list').slideUp();
-
   },
 
   renderChildren: function(){

@@ -6,9 +6,9 @@ export default Backbone.View.extend({
   tagName: 'li',
   className: 'menu-item',
 
-  // events: {
-  //   'click .price': 'addFoodToOrder'
-  // },
+  events: {
+    'click .price': 'addItemToOrder'
+  },
 
   initialize: function(){
     this.render();
@@ -18,9 +18,9 @@ export default Backbone.View.extend({
     this.$el.html(this.template(this.model.toJSON()));
   },
 
-  addFoodToOrder: function(e){
-    // e.preventDefault();
-    // console.log('test');
+  addItemToOrder: function(e){
+    console.log(this.model);
+
   }
 
 });
