@@ -166,11 +166,14 @@ body {
   border: 1px solid grey;
 }
 
-
 .menu-list {
   padding-left: 0;
 
 }
+
+  .category-name {
+    display: inline-block;
+  }
 
   .menu-item {
     list-style: none;

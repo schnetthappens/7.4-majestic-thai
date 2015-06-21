@@ -1,11 +1,10 @@
 
-// import MenuListView from './menuListView';
 import MenuItemView from './menuItemView';
-// import MenuListCollection from '../models/menuListCollection';
+
 
 export default Backbone.View.extend({
   template: JST['menu-category'],
-  tagName: 'ul',
+  tagName: 'div',
   className: 'menu-category',
 
   initialize: function(){
@@ -26,7 +25,7 @@ export default Backbone.View.extend({
         category: this.category
       });
 
-      this.$el.append(view.el);
+      this.$('.category-list').append(view.el);
       return view;
     }.bind(this));
 
