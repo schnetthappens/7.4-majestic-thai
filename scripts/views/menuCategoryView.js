@@ -1,7 +1,7 @@
 
-import MenuListView from './menuListView';
+// import MenuListView from './menuListView';
 import MenuItemView from './menuItemView';
-import MenuListCollection from '../models/menuListCollection';
+// import MenuListCollection from '../models/menuListCollection';
 
 export default Backbone.View.extend({
   template: JST['menu-category'],
@@ -20,17 +20,17 @@ export default Backbone.View.extend({
   renderChildren: function(){
     _.invoke(this.children || [], 'remove');
 
-    // this.children = this.collection.map(function(child) {
-    //   var view = new MenuItemView({
-    //     model: child,
-    //     category: category
-    //   });
-    //
-    //   this.$el.append(view.el);
-    //   return view;
-    // }.bind(this));
-    //
-    // return this;
+    this.children = this.collection.map(function(child) {
+      var view = new MenuItemView({
+        model: child,
+        category: this.category
+      });
+
+      this.$el.append(view.el);
+      return view;
+    }.bind(this));
+
+    return this;
 
   },
 

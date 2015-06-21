@@ -20,15 +20,18 @@ export default Backbone.View.extend({
   renderChildren: function(){
     _.invoke(this.children || [], 'remove');
 
-        this.children = _.each(this.collection.groupBy('category'), function(category, item) {
-            console.log(category, item);
+        var groupedCategories =  _.each(this.collection.groupBy('category'), function(items, category) {
+            console.log(items, category);
+
+          var groupedFoods = new Backbone.Collection(items)
+          var view = new MenuCategoryView({
+            category: category,
+            collection: groupedFoods
           });
-          //   var view = new MenuCategoryView({
-          //     category: category
-          //   });
-          //   this.$el.append(view.el);
-          //   return view;
-          // }.bind(this));
+
+          this.$el.append(view.el);
+          return view;
+        }.bind(this));
 
 
         return this;
