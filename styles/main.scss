@@ -171,9 +171,21 @@ body {
 
 }
 
+  .menu-category {
+    background-color: $light-gray;
+  }
+
   .category-name {
     display: inline-block;
+    margin-left: 2em;
+  /*   position: relative; */
   }
+
+  /* .show-category {
+    position: relative;
+    top: 1em;
+    right: 5em;
+  } */
 
   .menu-item {
     list-style: none;

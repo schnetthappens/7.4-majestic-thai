@@ -7,6 +7,11 @@ export default Backbone.View.extend({
   tagName: 'div',
   className: 'menu-category',
 
+  events: {
+    'click .show-category': 'toggleCategory'
+
+  },
+
   initialize: function(){
     this.render();
   },
@@ -14,6 +19,14 @@ export default Backbone.View.extend({
   render: function(){
     this.$el.html(this.template({category: this.category}));
     this.renderChildren();
+  },
+
+
+  toggleCategory: function(e){
+    console.log(e);
+
+
+
   },
 
   renderChildren: function(){
