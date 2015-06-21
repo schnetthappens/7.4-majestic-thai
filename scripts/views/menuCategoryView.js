@@ -12,13 +12,15 @@ export default Backbone.View.extend({
 
   },
 
-  initialize: function(){
-    this.render();
+  initialize: function(options){
+    this.category = options.category;
+    this.order = options.order;
+    this.render(options);
   },
 
-  render: function(){
+  render: function(options){
     this.$el.html(this.template({category: this.category}));
-    this.renderChildren();
+    this.renderChildren(options);
   },
 
 
@@ -27,13 +29,16 @@ export default Backbone.View.extend({
     $(this.el).closest('.menu-category').find('.category-list').slideToggle('slow', function(){});
   },
 
-  renderChildren: function(){
+  renderChildren: function(options){
     _.invoke(this.children || [], 'remove');
+
+    this.order = options.order;
 
     this.children = this.collection.map(function(child) {
       var view = new MenuItemView({
         model: child,
-        category: this.category
+        collection: this.collection,
+        order: this.order
       });
 
       this.$('.category-list').append(view.el);

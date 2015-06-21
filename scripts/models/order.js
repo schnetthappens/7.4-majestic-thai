@@ -1,42 +1,43 @@
 
-import {MenuListCollection} from './menuListCollection';
-
 var Order = Backbone.Model.extend({
   idAttribute: 'objectId',
-  urlRoot: "https://api.parse.com/1/classes/Order",
+  // urlRoot: "https://api.parse.com/1/classes/Order",
 
   defaults: {
-    name: ''
+    item: '',
+    price: 0,
+    category: '',
   },
 
   initialize: function(){
+
     //create a new collection keep track of the items
-    this.foods = new FoodListCollection();
+    this.order = new Backbone.Collection();
 
     //trigger all foods events on myself
-    this.listenTo(this.foods, 'all', this.trigger.bind(this));
+    this.listenTo(this.order, 'all', this.trigger.bind(this));
   },
 
   add: function(models, options){
-    this.foods.add(models, options);
-  },
-
-  remove: function(models, options) {
-    this.foods.remove(models, options);
-  },
-
-  toJSON: function(){
-    return_.extend({}, this.attributes, {
-      foods: this.foods.map(function(food){
-        return {
-          "_type": "Pointer",
-          "className": "Foods",
-          "objectId": foods.id
-        };
-      })
-    });
+    this.order.add(models, options);
   }
+  //
+  // remove: function(models, options) {
+  //   this.items.remove(models, options);
+  // },
+  //
+  // toJSON: function(){
+  //   return_.extend({}, this.attributes, {
+  //     items: this.items.map(function(item){
+  //       return {
+  //         "_type": "Pointer",
+  //         "className": "Items",
+  //         "objectId": item.id
+  //       };
+  //     })
+  //   });
+  // }
 
 });
 
-export default {Order};
+export default Order;

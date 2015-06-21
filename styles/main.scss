@@ -221,12 +221,12 @@ body {
 
     .price {
       width: 15%;
-      color: #fff;
-      background-color: #7CBB55;
+      color: #7CBB55;
+      background-color: #fff;
       margin-left: 5em;
       margin-bottom: 3em;
       border-radius: 4px;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); */
       border: 1px solid #7CBB55;
     }
 
@@ -234,6 +234,7 @@ body {
         color: #7CBB55;
         background-color: #fff;
         border: 1px solid #7CBB55;
+        /* transition: color 0.5s ease; */
       }
 
 
