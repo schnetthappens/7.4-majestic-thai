@@ -4,7 +4,7 @@ import MenuItemView from './menuItemView';
 
 export default Backbone.View.extend({
   template: JST['menu-category'],
-  tagName: 'div',
+  // tagName: 'div',
   className: 'menu-category',
 
   events: {
@@ -18,15 +18,15 @@ export default Backbone.View.extend({
 
   render: function(){
     this.$el.html(this.template({category: this.category}));
+    // $('.menu-category').empty().append(this.$el);
     this.renderChildren();
   },
 
 
   toggleCategory: function(e){
-    console.log(e);
-
-
-
+    // e.preventDefault();
+    console.log(e.target);
+    $('.category-list').slideToggle('slow', function(){});
   },
 
   renderChildren: function(){

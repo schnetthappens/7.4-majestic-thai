@@ -9,6 +9,7 @@ import Order from './models/order';
   $(document).ready(function(){
     Backbone.history.start();
 
+
     var items = new MenuListCollection();
       items.fetch().then(function(){
 
@@ -16,7 +17,6 @@ import Order from './models/order';
           $('.menu-container').append(menuListView.el);
 
       });
-
 
   });
 })();

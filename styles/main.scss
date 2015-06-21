@@ -175,6 +175,10 @@ body {
     background-color: $light-gray;
   }
 
+    .category-list {
+      display: none;
+    }
+
   .category-name {
     display: inline-block;
     margin-left: 2em;

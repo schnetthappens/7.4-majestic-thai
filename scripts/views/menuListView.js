@@ -21,7 +21,7 @@ export default Backbone.View.extend({
     _.invoke(this.children || [], 'remove');
 
         var groupedCategories =  _.each(this.collection.groupBy('category'), function(items, category) {
-            console.log(items, category);
+            // console.log(items, category);
 
           var groupedFoods = new Backbone.Collection(items)
           var view = new MenuCategoryView({
